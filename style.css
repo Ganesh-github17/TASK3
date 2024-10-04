@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0f7fa; /* Light teal background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+.container {
+    max-width: 600px;
+    width: 100%; /* Responsive width */
+    margin: 20px; /* Margin for responsiveness */
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #00796b; /* Teal color */
+}
+
+.input-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #00796b; /* Teal button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #004d40; /* Darker teal on hover */
+}
+
+.task-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.task-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #f1f8e9; /* Light green background for tasks */
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #888;
+    background-color: #e0e0e0; /* Gray background for completed tasks */
+}
+
+.notification {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4caf50; /* Green */
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    z-index: 1000;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.notification.show {
+    display: block; /* Show the notification */
+    opacity: 1;
+}
